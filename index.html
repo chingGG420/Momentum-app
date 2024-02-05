@@ -3,11 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Momentum App</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/clock.js" defer></script>
+    <script src="js/greetings.js" defer></script>
+    <script src="js/weather.js" defer></script>
+    <script src="js/background.js" defer></script>
+    <script src="js/focus.js" defer></script>
+    <script src="js/todo.js" defer></script>
+    <script src="js/quotes.js" defer></script>
+
 </head>
 <body>
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+    <h1 id="clock"></h1>
+    <form id="login-form" class="hidden">
+        <input input="text" required maxlength="10" placeholder="What is your name?"
+        onfocus='this.placeholder=""'
+        onblur="this.placeholder = 'What is your name?'"
+        />
+        <input type="submit" value="login" class="hidden" />
+    </form>
+    <h1 id="greetings" class="hidden"></h1>
+    <form id="focus-form">
+        <input type="text" placeholder="What is your focus today?" required
+        onfocus='this.placeholder=""'
+        onblur="this.placeholder = 'What is your focus today?'"
+        />
+    </form>
+    <div id="focus-container"></div>
+    
+    <button id="addQuoteBtn"><i class="fa fa-plus-square"></i></button>
+    <div id="quotes" contenteditable="true">
+        <span></span>
+        <span></span>
+    </div>
+
+    <span id="todo" onclick="toggleTodoContainer()">Todo</span>
+    <div id="todo-container">
+        <span id="addTodoText">Add a todo to start</span>
+        <div id="list-container"></div>
+        <input type="text" id="new-todo-input" placeholder="Add todo" autocomplete="off">
+    </div>
+    
     
 </body>
 </html>
