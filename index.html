@@ -21,14 +21,15 @@
         <span></span>
     </div>
     <h1 id="clock"></h1>
+    <div id="greetings" class="hidden"></div>
     <form id="login-form" class="hidden">
         <input id="name-input" type="text" required maxlength="10" placeholder="What is your name?"
-        onfocus='this.placeholder=""'
-        onblur="this.placeholder = 'What is your name?'"
+            onfocus='this.placeholder=""'
+            onblur="this.placeholder = 'What is your name?'"
         />
         <input id="login-submit" type="submit" value="login" class="hidden" />
     </form>
-    
+
     <form id="focus-form">
         <input id="focus-input" type="text" placeholder="What is your focus today?" required
         onfocus='this.placeholder=""'
