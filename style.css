@@ -1,3 +1,49 @@
+@media screen and (min-width: 375px) and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  #login-form input:first-child {
+    width: 80vw;
+    height: 10vh;
+    margin: 3vw;
+    font-size: 5vw;
+  }
+  #focus-form input:first-child {
+    width: 60vw;
+    height: 6vh;
+    font-size: 3vw;
+  }
+  #todo-container {
+    width: 80vw;
+    bottom: 8vh;
+  }
+  #addTodoText {
+    margin-top: 30vh;
+    margin-bottom: 15vh;
+  }
+  #list-container {
+    padding: 0 2vw 2vh;
+  }
+}
+/* Add these media queries at the end of your CSS file */
+@media only screen and (max-width: 600px) {
+  #clock {
+    margin-top: 5%;
+    font-size: clamp(2rem, 4vw, 5rem);
+  }
+  #greetings {
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    margin-bottom: 5%;
+  }
+  #focus-form {
+    margin-top: 2%;
+  }
+  #focus-container {
+    margin-top: 2%;
+  }
+  #focus-form input:first-child {
+    width: 80%;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+  }
+}
 html,
 body {
   display: flex;
@@ -210,8 +256,8 @@ img {
   display: flex;
   position: fixed;
   font-size: 2rem;
-  left: 50%; /* Position the button at the horizontal center of the viewport */
-  transform: translateX(-50%); /* Adjust to center the button */
-  bottom: 6vh; /* Position the button at the bottom of the viewport */
-  z-index: 999; /* Ensure the button is above other elements */
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6vh;
+  z-index: 999;
 }/*# sourceMappingURL=style.css.map */

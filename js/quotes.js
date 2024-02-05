@@ -38,7 +38,7 @@ document.getElementById("quotes").addEventListener("keypress", function(event) {
 const displayQuotes = function () {
     let allQuotes = [];
 
-    // Fetch Chuck Norris quote
+    // Fetch Breaking bad quote
     fetch(quotesApi)
         .then(response => {
             return response.json();
@@ -55,7 +55,7 @@ const displayQuotes = function () {
             document.querySelector("#quotes").innerHTML = `"${allQuotes[randomIndex]}"`;
         })
         .catch(error => {
-            console.error('Error fetching Chuck Norris quote:', error);
+            console.error('Error fetching quote:', error);
         });
 };
 

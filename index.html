@@ -22,17 +22,20 @@
     </div>
     <h1 id="clock"></h1>
     <form id="login-form" class="hidden">
-        <input id="username-input" type="text" required maxlength="10" placeholder="What is your name?"
+        <input id="name-input" type="text" required maxlength="10" placeholder="What is your name?"
+        onfocus='this.placeholder=""'
         onblur="this.placeholder = 'What is your name?'"
         />
-        <input type="submit" value="login" class="hidden" />
+        <input id="login-submit" type="submit" value="login" class="hidden" />
     </form>
-    <h1 id="greetings" class="hidden"></h1>
+    
     <form id="focus-form">
         <input id="focus-input" type="text" placeholder="What is your focus today?" required
+        onfocus='this.placeholder=""'
         onblur="this.placeholder = 'What is your focus today?'"
         />
     </form>
+    
     <div id="focus-container"></div>
     
     <button id="addQuoteBtn"><i class="fa fa-plus-square"></i></button>
@@ -48,6 +51,6 @@
         <input type="text" id="new-todo-input" placeholder="Add todo" autocomplete="off">
     </div>
     
-    
+
 </body>
 </html>

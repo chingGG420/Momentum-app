@@ -1,3 +1,5 @@
+@use './breakpoint';
+
 html,
 body {
   display: flex;
@@ -190,8 +192,8 @@ img {
   display: flex;
   position: fixed;
   font-size: 2rem;
-  left: 50%; /* Position the button at the horizontal center of the viewport */
-  transform: translateX(-50%); /* Adjust to center the button */
-  bottom: 6vh; /* Position the button at the bottom of the viewport */
-  z-index: 999; /* Ensure the button is above other elements */
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6vh;
+  z-index: 999;
 }
