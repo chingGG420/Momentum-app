@@ -1,4 +1,4 @@
-@use './breakpoint';
+// @use './breakpoint';
 
 html,
 body {
@@ -38,6 +38,7 @@ input {
   text-align: center;
   color: white;
 }
+
 img {
   position: absolute;
   top: 0;
@@ -60,7 +61,7 @@ img {
 
 #clock {
   position: flex;
-  margin-top: 170px;
+  margin-top: 150px;
   margin-bottom: 0;
   font-size: clamp(5rem, -2.0313rem + 22.5vw, 10.625rem);
   color: white;
@@ -74,16 +75,12 @@ img {
 }
 
 #login-form input:first-child {
-  width: 400px;
+  width: auto;
   height: 55px;
   margin: 21px;
-  font-size: 40px;
+  font-size: clamp(1.25rem, 0.7031rem + 1.75vw, 1.6875rem);
 }
-#login-form input:first-child::placeholder {
-  text-align: center;
-  color: white;
-  font-size: 30px;
-}
+
 #greetings {
   height: 55px;
   font-size: clamp(1.5625rem, 0.3906rem + 3.75vw, 2.5rem);
@@ -107,21 +104,24 @@ img {
 
 
 #focus-form input:first-child {
-  width: 350px;
+  width: auto;
   height: 45px;
   font-size: clamp(1.25rem, 0.7031rem + 1.75vw, 1.6875rem);
 }
 
-#focus-form input:first-child::placeholder {
+#login-form input:first-child::placeholder,
+#focus-form input:first-child::placeholder,
+#greetings input:-webkit-autofill::placeholder {
   text-align: center;
   color: white;
   font-size: clamp(1.25rem, 0.7031rem + 1.75vw, 1.6875rem);
 }
 
+
 #todo {
   position: absolute;
   right: 2rem;
-  bottom: 2rem;
+  bottom: 3rem;
   cursor: pointer;
   display: flex;
   font-size: 1.5rem;
@@ -176,16 +176,19 @@ img {
 }
 
 #quotes {
-  width: 100%;
+  width: auto; /* Adjust width as needed */
+  max-width: 80%; /* Set a maximum width to prevent taking too much space */
   text-align: center;
   position: fixed;
   bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 999;
 }
 
 #quotes span {
-  display: flex;
-  font-size: 12px;
+  display: inline-block; /* Ensure the span takes up only the necessary width */
+  font-size: clamp(0.125rem, -0.6563rem + 2.5vw, 0.75rem);
 }
 
 #addQuoteBtn {
@@ -194,6 +197,6 @@ img {
   font-size: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 6vh;
+  bottom: 7vh;
   z-index: 999;
 }

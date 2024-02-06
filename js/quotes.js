@@ -61,4 +61,4 @@ const displayQuotes = function () {
 
 // Display quotes when the page loads and every minute
 window.addEventListener('load', displayQuotes);
-setInterval(displayQuotes, 15000);
+setInterval(displayQuotes, 5000);

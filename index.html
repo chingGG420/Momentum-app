@@ -24,6 +24,7 @@
     <div id="greetings" class="hidden"></div>
     <form id="login-form" class="hidden">
         <input id="name-input" type="text" required maxlength="10" placeholder="What is your name?"
+            autocomplete="off"
             onfocus='this.placeholder=""'
             onblur="this.placeholder = 'What is your name?'"
         />
@@ -32,6 +33,7 @@
 
     <form id="focus-form">
         <input id="focus-input" type="text" placeholder="What is your focus today?" required
+        autocomplete="off"
         onfocus='this.placeholder=""'
         onblur="this.placeholder = 'What is your focus today?'"
         />
