@@ -1,4 +1,4 @@
-const quotesApi = "https://api.breakingbadquotes.xyz/v1/quotes";
+const quotesApi = "https://api.gameofthronesquotes.xyz/v1/random";
 
 // Function to handle adding quotes
 const addQuote = () => {
@@ -44,7 +44,7 @@ const displayQuotes = function () {
             return response.json();
         })
         .then(data => {
-            allQuotes.push(data[0].quote);
+            allQuotes.push(data.sentence);
 
             // Retrieve custom quotes from local storage
             const customQuotes = JSON.parse(localStorage.getItem("customQuotes")) || [];
