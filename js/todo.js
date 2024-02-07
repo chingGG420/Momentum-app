@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const listContainer = document.getElementById("list-container");
   const addTodoText = document.getElementById("addTodoText");
   const todoContainer = document.getElementById("todo-container");
+  const todoSpan = document.getElementById("todo");
+  todoSpan.addEventListener("click", toggleTodoContainer);
 
   loadTodos();
 
