@@ -100,7 +100,8 @@ img {
 
 .focus-item {
   margin-bottom: 10px;
-  font-size: clamp(1.25rem, 0.4688rem + 2.5vw, 1.875rem);
+  font-size: clamp(2rem, 0.4688rem + 2.5vw, 3rem);
+  color: red;
 }
 
 #focus-form input:first-child {
@@ -202,4 +203,29 @@ img {
   transform: translateX(-50%);
   bottom: 7vh;
   z-index: 999;
+}
+
+#change-name-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#change-name-input {
+  display: none;
+  background: transparent;
+  color: white;
+  padding: 5px;
+  margin-right: 5px;
+  width: auto;
+}
+
+#change-name-input::-moz-placeholder {
+  color: white; /* Change the color as needed */
+}
+
+#change-name-input::placeholder {
+  color: white; /* Change the color as needed */
 }/*# sourceMappingURL=style.css.map */
